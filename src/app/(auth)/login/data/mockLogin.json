@@ -1,0 +1,25 @@
+
+{
+  "credentials": {
+    "email": "demo@example.com",
+    "username": "demo.user",
+    "password": "Demo@123"
+  },
+  "responses": {
+    "success": {
+      "success": true,
+      "message": "Login successful!",
+      "code": "LOGIN_SUCCESS"
+    },
+    "invalidCredentials": {
+      "success": false,
+      "message": "The email or password you entered is incorrect.",
+      "code": "INVALID_CREDENTIALS"
+    },
+    "serviceError": {
+      "success": false,
+      "message": "Unable to log in right now. Please try again.",
+      "code": "SERVICE_ERROR"
+    }
+  }
+}

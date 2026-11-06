@@ -1,0 +1,41 @@
+
+{
+  "testData": {
+    "email": "demo@example.com",
+    "otp": "123456",
+    "expirySeconds": 300,
+    "resendSeconds": 30
+  },
+  "responses": {
+    "verificationSuccess": {
+      "success": true,
+      "message": "OTP verified successfully.",
+      "code": "OTP_VERIFIED"
+    },
+    "invalidOtp": {
+      "success": false,
+      "message": "The verification code is incorrect.",
+      "code": "INVALID_OTP"
+    },
+    "expiredOtp": {
+      "success": false,
+      "message": "Your verification code has expired. Please request a new one.",
+      "code": "OTP_EXPIRED"
+    },
+    "verificationFailure": {
+      "success": false,
+      "message": "Unable to verify the code right now. Please try again.",
+      "code": "OTP_VERIFICATION_FAILED"
+    },
+    "resendSuccess": {
+      "success": true,
+      "message": "A new verification code has been requested.",
+      "code": "OTP_RESEND_ACCEPTED"
+    },
+    "resendFailure": {
+      "success": false,
+      "message": "Unable to resend the code right now. Please try again.",
+      "code": "OTP_RESEND_FAILED"
+    }
+  }
+}

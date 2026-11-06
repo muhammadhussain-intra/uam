@@ -1,0 +1,206 @@
+@import "tailwindcss";
+
+/* =====================================
+   UAM — Global Design System
+   ===================================== */
+
+:root {
+  /* Brand */
+  --primary: #16834A;
+  --action: #20B65A;
+  --primary-hover: #126C3C;
+  --primary-pressed: #0D522D;
+
+  /* Surfaces */
+  --surface-page: #F7F9F8;
+  --surface-card: #FFFFFF;
+  --surface-subtle: #F4F7F5;
+  --surface-green-light: #E8F5EC;
+
+  /* Typography */
+  --text-primary: #24332A;
+  --text-secondary: #69766E;
+  --text-muted: #89948D;
+
+  /* Borders */
+  --border-default: #DCE5DE;
+  --border-strong: #BBC9BE;
+
+  /* Status */
+  --status-success: #16834A;
+  --status-success-bg: #E8F5EC;
+  --status-warning: #B46F0F;
+  --status-warning-bg: #FFF6E0;
+  --status-error: #BE2E2E;
+  --status-error-bg: #FDECEC;
+  --status-info: #2B6CB0;
+  --status-info-bg: #EBF4FF;
+
+  /* Typography scale */
+  --font-family-base: "Inter", Arial, sans-serif;
+  --font-size-xs: 12px;
+  --font-size-sm: 13px;
+  --font-size-md: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 30px;
+  --font-size-4xl: 36px;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* Border radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+  --radius-full: 9999px;
+
+  /* Component sizing */
+  --control-height-sm: 32px;
+  --control-height-md: 40px;
+  --control-height-lg: 44px;
+  --control-height-xl: 48px;
+  --sidebar-width: 248px;
+  --sidebar-collapsed-width: 72px;
+  --topbar-height: 64px;
+  --content-max-width: 1440px;
+  --table-row-height: 56px;
+  --auth-card-width: 440px;
+
+  /* Shadows */
+  --shadow-card: 0 2px 12px #24332A14;
+  --shadow-modal: 0 12px 32px #24332A24;
+}
+
+/* Tailwind CSS v4 semantic utilities */
+@theme inline {
+  --color-primary: var(--primary);
+  --color-action: var(--action);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-pressed: var(--primary-pressed);
+
+  --color-page: var(--surface-page);
+  --color-card: var(--surface-card);
+  --color-subtle: var(--surface-subtle);
+  --color-green-light: var(--surface-green-light);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+
+  --color-border-default: var(--border-default);
+  --color-border-strong: var(--border-strong);
+
+  --color-success: var(--status-success);
+  --color-success-bg: var(--status-success-bg);
+  --color-warning: var(--status-warning);
+  --color-warning-bg: var(--status-warning-bg);
+  --color-error: var(--status-error);
+  --color-error-bg: var(--status-error-bg);
+  --color-info: var(--status-info);
+  --color-info-bg: var(--status-info-bg);
+
+  --font-sans: var(--font-family-base);
+
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+  --radius-2xl: var(--radius-2xl);
+  --radius-full: var(--radius-full);
+}
+
+/* Base styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: var(--surface-page);
+  color: var(--text-primary);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-hover);
+}
+
+
+/* =====================================
+   Custom Scrollbar — UAM Theme
+   ===================================== */
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) var(--surface-subtle);
+}
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--surface-subtle);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #16834A80;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--surface-subtle);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* Horizontal scrollbar */
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
